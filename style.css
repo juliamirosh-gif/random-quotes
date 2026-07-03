@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cormorant Garamond", serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(rgba(4, 18, 53, 0.65), rgb(86, 77, 22)), url(images/sky.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  width: min(90%, 650px);
+  padding: 20px 30px;
+  background: rgba(12, 24, 60, 0.45);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 25px;
+  text-align: center;
+  color: white;
+  box-shadow:
+    0 0 35px rgba(0, 0, 0, 0.45),
+    0 0 20px rgba(255, 225, 120, 0.05);
+}
+
+h1 {
+  font-size: 40px;
+  color: #f5e4b3;
+  letter-spacing: 2px;
+  text-shadow: 0 0 12px rgba(255, 225, 120, 0.2);
+}
+
+h1::before {
+  content: "✦";
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  color: #d4a547;
+}
+
+h1::after {
+  content: "⸻ ✧ ⸻";
+  display: block;
+  margin-top: 10px;
+  font-size: 10px;
+  color: #d4a547;
+  opacity: 0.8;
+}
+.subtitle {
+  margin: 10px 0 20px;
+  color: #d8c79b;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.quote-box {
+  min-height: 120px;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 10px 40px;
+}
+
+.quote-box::before {
+  content: "༺";
+  position: absolute;
+  top: -45px;
+  left: 5px;
+  font-size: 65px;
+  color: #d4a547;
+  opacity: 0.35;
+}
+
+.quote-box::after {
+  content: "༻";
+  position: absolute;
+  right: 5px;
+  bottom: 1px;
+  font-size: 65px;
+  color: #d4a547;
+  opacity: 0.35;
+}
+
+#quote {
+  min-height: 60px;
+  max-width: 90%;
+  margin: 0 auto 20px;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #d8d7c6;
+  font-style: italic;
+}
+
+button {
+  background: #d4a547;
+  color: #17284d;
+  border: none;
+  border-radius: 40px;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.35s;
+  margin-top: -90px;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px #d4a547;
+}
+
+.prince {
+  position: absolute;
+  left: 40px;
+  bottom: 330px;
+  z-index: 2;
+}
+
+.prince img {
+  height: 250px;
+  opacity: 0.8;
+  filter: brightness(-8.9);
+}
+
+.b-612 {
+  position: absolute;
+  right: -20px;
+  bottom: -15px;
+  z-index: 2;
+}
+
+.b-612 img {
+  height: 470px;
+  opacity: 0.8;
+  filter: saturate(60%) sepia(40%);
+}
+
+.rose {
+  position: absolute;
+  right: 75px;
+  bottom: 205px;
+  z-index: 3;
+}
+
+.rose img {
+  height: 75px;
+  transform: rotate(-11deg);
+  filter: opacity(65%) saturate(70%) sepia(40%) drop-shadow(0 0 10px #fffdf6);
+  animation: rose 6s ease-in-out infinite;
+}
+
+.stars {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: #fff6d2;
+  box-shadow:
+    0 0 5px #fff7c9,
+    0 0 10px #ffe189;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(3px, -3px);
+  }
+  50% {
+    transform: translate(-2px, 2px);
+  }
+  75% {
+    transform: translate(3px, 4px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
