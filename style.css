@@ -71,21 +71,21 @@ h1::after {
 }
 
 .quote-box::before {
-  content: "༺";
+  content: "《";
   position: absolute;
-  top: -45px;
+  top: 4px;
   left: 5px;
-  font-size: 65px;
+  font-size: 50px;
   color: #d4a547;
   opacity: 0.35;
 }
 
 .quote-box::after {
-  content: "༻";
+  content: "》";
   position: absolute;
   right: 5px;
-  bottom: 1px;
-  font-size: 65px;
+  bottom: 76px;
+  font-size: 50px;
   color: #d4a547;
   opacity: 0.35;
 }
@@ -98,9 +98,20 @@ h1::after {
   line-height: 1.6;
   color: #d8d7c6;
   font-style: italic;
+  transition: opacity 0.4s ease;
+}
+#author {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: -150px;
+  color: #d4a547;
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: 1px;
+  transition: opacity 0.35s ease;
 }
 
-button {
+.btn {
   background: #d4a547;
   color: #17284d;
   border: none;
@@ -113,22 +124,9 @@ button {
   margin-top: -90px;
 }
 
-button:hover {
+.btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 18px #d4a547;
-}
-
-.prince {
-  position: absolute;
-  left: 40px;
-  bottom: 330px;
-  z-index: 2;
-}
-
-.prince img {
-  height: 250px;
-  opacity: 0.8;
-  filter: brightness(-8.9);
 }
 
 .b-612 {
