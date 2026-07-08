@@ -21,7 +21,20 @@
         <p id="quote"></p>
         <p id="author"></p>
       </div>
-      <button id="newQuote" class="btn">✦ New Quote ✦</button>
+      <div class="buttons">
+        <button id="newQuote" class="btn">✦ New Quote ✦</button>
+        <button id="favoriteQuote" class="btn secondary">♡ Favorite</button>
+        <button id="showFavorites" class="btn secondary">★ Favorites</button>
+      </div>
+    </div>
+    <div id="favoritesModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Favorite Quotes</h2>
+
+        <div id="favoritesList"></div>
+
+        <button id="closeModal" class="btn">Close</button>
+      </div>
     </div>
     <div class="b-612">
       <img src="images/b-612.png" alt="" />

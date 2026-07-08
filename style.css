@@ -101,14 +101,21 @@ h1::after {
   transition: opacity 0.4s ease;
 }
 #author {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-right: -150px;
+  width: 90%;
+  margin: 20px auto;
+  text-align: right;
   color: #d4a547;
-  font-size: 20px;
+  font-size: 15px;
   font-style: italic;
   letter-spacing: 1px;
   transition: opacity 0.35s ease;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -116,12 +123,11 @@ h1::after {
   color: #17284d;
   border: none;
   border-radius: 40px;
-  padding: 10px 30px;
-  font-size: 20px;
+  padding: 10px 25px;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.35s;
-  margin-top: -90px;
 }
 
 .btn:hover {
@@ -129,6 +135,16 @@ h1::after {
   box-shadow: 0 0 18px #d4a547;
 }
 
+.secondary {
+  background: transparent;
+  color: #d4a547;
+  border: 1px solid #d4a547;
+}
+
+.secondary:hover {
+  background: #d4a547;
+  color: #17284d;
+}
 .b-612 {
   position: absolute;
   right: -20px;
@@ -153,7 +169,6 @@ h1::after {
   height: 75px;
   transform: rotate(-11deg);
   filter: opacity(65%) saturate(70%) sepia(40%) drop-shadow(0 0 10px #fffdf6);
-  animation: rose 6s ease-in-out infinite;
 }
 
 .stars {
@@ -198,4 +213,89 @@ h1::after {
   100% {
     transform: translate(0, 0);
   }
+}
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  width: min(90%, 600px);
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 30px;
+  background: rgba(12, 24, 60, 0.95);
+  border: 1px solid rgba(212, 165, 71, 0.4);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.modal-content h2 {
+  color: #f5e4b3;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.favorite-item {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.favorite-item:last-child {
+  border-bottom: none;
+}
+
+.favorite-item p {
+  font-style: italic;
+  line-height: 1.6;
+  color: #d8d7c6;
+}
+
+.favorite-item small {
+  display: block;
+  margin-top: 12px;
+  color: #d4a547;
+}
+
+.favorite-item button {
+  margin-top: 12px;
+
+  padding: 6px 14px;
+
+  border: none;
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  background: #a13a3a;
+  color: white;
+
+  transition: 0.3s;
+}
+
+.favorite-item button:hover {
+  background: #d9534f;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #d4a547;
+  border-radius: 20px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
 }
