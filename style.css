@@ -19,9 +19,10 @@ body {
 }
 
 .container {
-  position: relative;
+  position: fixed;
   z-index: 5;
   width: min(90%, 650px);
+  min-height: 400px;
   padding: 20px 30px;
   background: rgba(12, 24, 60, 0.45);
   backdrop-filter: blur(12px);
@@ -84,7 +85,7 @@ h1::after {
   content: "》";
   position: absolute;
   right: 5px;
-  bottom: 76px;
+  bottom: 69px;
   font-size: 50px;
   color: #d4a547;
   opacity: 0.35;
@@ -114,7 +115,7 @@ h1::after {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: -20px;
   flex-wrap: wrap;
 }
 
@@ -145,6 +146,26 @@ h1::after {
   background: #d4a547;
   color: #17284d;
 }
+.heart-btn {
+  background: none;
+  border: none;
+  color: #d4a547;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.heart-btn:hover {
+  transform: scale(1.05);
+  color: #fffdf3;
+  text-shadow: 0 0 12px #fffdf3;
+}
+
+.heart-btn.active {
+  color: #fffdf3;
+  text-shadow: 0 0 15px #fffdf3;
+}
+
 .b-612 {
   position: absolute;
   right: -20px;

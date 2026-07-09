@@ -36,12 +36,13 @@ const favoritesModal = document.getElementById("favoritesModal");
 const closeModalButton = document.getElementById("closeModal");
 const favoritesList = document.getElementById("favoritesList");
 
-let currentQuote = null;
+let currentQuote;
 let previousIndex = -1;
 
 function showRandomQuote() {
   quoteElement.style.opacity = 0;
   authorElement.style.opacity = 0;
+  favoriteQuoteButton.hidden = false;
 
   setTimeout(() => {
     let randomIndex;
@@ -79,9 +80,11 @@ function updateFavoriteButton() {
   if (!currentQuote) return;
 
   if (isFavorite()) {
-    favoriteQuoteButton.textContent = "♥ Remove Favorite";
+    favoriteQuoteButton.textContent = "❤";
+    favoriteQuoteButton.classList.add("active");
   } else {
     favoriteQuoteButton.textContent = "♡";
+    favoriteQuoteButton.classList.remove("active");
   }
 }
 
